@@ -9,7 +9,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = "AIzaSyAmQXQQUHPBY845RhvxcpQQjPYWcMOpRXA"
+openai.api_key = "API_KEY"
 
 @app.route("/process_image", methods=["POST"])
 def process_image():
