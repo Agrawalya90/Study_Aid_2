@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Video Content Analyzer & Quiz Generator",
+  "description": "Takes screenshots from videos, sends them to a Python backend for OCR, summarization and MCQ generation.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5019/*"
+  ]
+}
